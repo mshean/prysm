@@ -237,5 +237,11 @@ if [[ "$#" -gt 1 ]] && [[ $2 == --download-only ]]; then
     exit 0
 fi
 
+if [ ! -d "/var/run/prysm" ]; then
+    sudo mkdir /var/run/prysm
+    sudo chown $USER:$USER /var/run/prysm
+fi
+
 color "36" "Starting Prysm $1 ${*:2}"
+echo $$ > /var/run/prysm/$1.pid
 exec -a "$0" "${process}" "${@:2}"
