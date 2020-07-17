@@ -1,0 +1,12 @@
+[Unit]
+Description=slasher Service
+After=network.target
+
+[Service]
+Type=simple
+User=ubuntu
+ExecStart=/home/ubuntu/prysm/prysm.sh slasher --datadir=/data/eth2
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
