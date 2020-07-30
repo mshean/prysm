@@ -1,4 +1,4 @@
 check process prysm.sh with pidfile /var/run/prysm/beacon-chain.pid
     start program = "/usr/sbin/service beacon-chain start"
     stop program = "/usr/sbin/service beacon-chain stop"
-    if memory usage > 90% for 2 cycles then restart
+    if memory usage > 85% for 2 cycles then restart
