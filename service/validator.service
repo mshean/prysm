@@ -5,7 +5,7 @@ After=network.target
 [Service]
 Type=simple
 User=ubuntu
-ExecStart=/home/ubuntu/prysm/prysm.sh validator --keymanager=keystore --keymanageropts='{"path":"/home/ubuntu/keystore","passphrase":"changeme"}' --datadir=/data/eth2
+ExecStart=/home/ubuntu/prysm/prysm.sh validator --datadir=/data/eth2
 Restart=always
 
 [Install]
