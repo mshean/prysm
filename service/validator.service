@@ -5,7 +5,7 @@ After=network.target
 [Service]
 Type=simple
 User=ubuntu
-ExecStart=/home/ubuntu/prysm/prysm.sh validator --datadir=/data/eth2 --wallet-password-file /home/ubuntu/keystore-pass.txt
+ExecStart=/home/ubuntu/prysm/prysm.sh validator --datadir=/data/eth2 --wallet-password-file /home/ubuntu/keystore-pass.txt --graffiti poapZkGZfQXrmwCMEZQX0Ph7fh4ESJoA
 Restart=always
 
 [Install]
